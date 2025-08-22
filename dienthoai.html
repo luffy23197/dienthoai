@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Mobile OOP – gửi/nhận tin nhắn</title>
+</head>
+<body>
+<h3>Lớp Mobile (pin, bật/tắt, sạc, soạn, gửi/nhận, inbox/sent)</h3>
+<style>
+    body{font-family:system-ui;margin:16px}
+    .phone{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin:8px 0}
+    .row{display:flex;gap:8px;align-items:center;margin:6px 0;flex-wrap:wrap}
+    input,button,textarea{padding:6px}
+    textarea{width:100%;min-height:70px}
+    button{border:0;border-radius:8px;background:#10b981;color:#fff;cursor:pointer}
+    .muted{color:#6b7280}
+    .col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    ul{margin:6px 0 0 18px}
+    .log{white-space:pre-wrap;background:#f8fafc;border:1px solid #e5e7eb;border-radius:8px;padding:8px}
+</style>
+<div class="col">
+    <!-- NOKIA -->
+    <div class="phone" id="nokiaBox">
+        <h4>Nokia <span id="nokiaStatus" class="muted"></span></h4>
+        <div class="row">
+            <button id="nokiaOn">Bật</button>
+            <button id="nokiaOff">Tắt</button>
+            <button id="nokiaCharge">Sạc +10</button>
+            <button id="nokiaCheck">Kiểm tra</button>
+        </div>
+        <textarea id="nokiaDraft" placeholder="Soạn tin nhắn..."></textarea>
+        <div class="row">
+            <button id="nokiaSend">Gửi cho iPhone</button>
+            <button id="nokiaInboxBtn">Xem Inbox</button>
+            <button id="nokiaSentBtn">Xem Sent</button>
+        </div>
+        <div id="nokiaView" class="log"></div>
+    </div>
+
+    <!-- IPHONE -->
+    <div class="phone" id="iphoneBox">
+        <h4>iPhone <span id="iphoneStatus" class="muted"></span></h4>
+        <div class="row">
+            <button id="iphoneOn">Bật</button>
+            <button id="iphoneOff">Tắt</button>
+            <button id="iphoneCharge">Sạc +10</button>
+            <button id="iphoneCheck">Kiểm tra</button>
+        </div>
+        <textarea id="iphoneDraft" placeholder="Soạn tin nhắn..."></textarea>
+        <div class="row">
+            <button id="iphoneSend">Gửi cho Nokia</button>
+            <button id="iphoneInboxBtn">Xem Inbox</button>
+            <button id="iphoneSentBtn">Xem Sent</button>
+        </div>
+        <div id="iphoneView" class="log"></div>
+    </div>
+    <script src="dienthoai.js"></script>
+</div>
+</body>
+</html>
